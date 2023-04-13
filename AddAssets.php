@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard || Welcome</title>
+</head>
+<body>
+    <header>
+        <marquee behavior="dynamic" direction="left"><h1>WELCOME TO ASSETS MANAGEMENT SYSTEM</h1></marquee>
+    </header>
+    <hr>
+    <style>
+        marquee:hover{
+            color: blue;
+        }
+        marquee{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        hr{
+            width: 1005;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            border: 0%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .navbar{
+            overflow: hidden;
+        }
+        .navbar a{
+            padding: 5%;
+        }
+        .dropdown-contents{
+            display: none;
+            min-width: 20px;
+            padding: 16px;
+            z-index: 1;
+        }
+        .dropdown-contents a{
+            display: block;
+        }
+        .dropdown-contents a:hover{
+            background-color: white;
+            color: black;
+        }
+        .dropdown:hover .dropdown-contents{
+            display: block;
+        }
+        .navbar a{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            padding-top: 16px;
+        }
+        .navbar{
+            /*text-align: center;*/
+            width: 16%;
+            background-color: rgb(210, 203, 203);
+            height: 740px;
+            float: left;
+            border-right: 2px solid black;
+        }
+        #moj{
+            width: 100%;
+        }
+        #moj a:hover{
+            width: 100%;
+            background-color: blue;
+            color: #ffffff;
+        }
+        #log a:hover{
+            color: #ffffff;
+            background-color: blue;
+        }
+        .pink{
+            width: 100%;
+        }
+        .container h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        label{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        form button{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        form button:hover{
+            color: white;
+            background-color: blue;
+        }
+    </style>
+    <div class="navbar"><br>
+        <div id="moj" class="pink">
+        <a href="dashboard.html" id="moja">Dashboard</a></div><br><hr>
+        <div class="dropdown"><br>
+            <a href="#">Asset Management</a>
+            <div class="dropdown-contents"><hr>
+                <a href="AddAssets.php">New Assets</a><br><hr>
+                <div class="update">
+                <a href="#"onclick="openform()" >Update Asset</a>
+                </div>
+            </div><br><br>
+           
+        </div>
+        <div id="log"><hr><br>
+            <a href="login.php" id="logi">Logout</a></div><br><hr>
+    </div>
+    <div class="container">
+        <br>
+      <h1 id="H1">Add New Assets</h1> <br>
+      <hr><br>
+      <div class="MySlides">
+        <center>
+            <form action="AddAssetsConnect.php" method="post" id="myform">
+                <label for="Asset ID">Asset ID</label><br>
+                <input type="number" name="ID" placeholder="Enter Aset ID" required><br><br>
+                <label for="Asset Name">Asset Name</label><br>
+                <input type="text" name="Name" id="" placeholder="Enter Asset Name" required><br><br>
+                <label for="date">Date</label><br>
+                <input type="date" name="Date" id="" required><br><br>
+                <label for="department">Department</label><br>
+                <select name="Department" id="">
+                    <option value="choose">choose</option>
+                    <option value="ICT">ICT</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Lab Science">Lab Science</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="Business">Business</option>
+                    <option value="Telecommunication">Telecommunication</option>
+                </select><br><br>
+                <label for="material">Material</label><br>
+                <select name="Material" id="">
+                    <option value="choose">choose</option>
+                    <option value="wood">Wood</option>
+                    <option value="metal/Iron">Metal/Iron</option>
+                    <option value="plastic">Plastic</option>
+                </select><br><br>
+                <label for="status">Status</label><br>
+                <select name="Status" id="">
+                    <option value="choose">choose</option>
+                    <option value="broken">broken</option>
+                    <option value="good">good</option>
+                </select><br><br>
+                <button type="submit" id="btn1">Add Asset</button>
+            </form>
+        </center>
+      </div> 
+      <style>
+        form input, select{
+            width: 35%;
+            height: 40px;
+        }
+        form{
+            width: 100%;
+        }
+        .wraping form input{
+            width: 400px;
+        }
+        .wraping form p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .wraping form{
+            /*display:none;*/
+            border: 1px solid black;
+            width: 450px;
+        }
+        .wraping form a{
+            font-size: 20px;
+            font-weight: 900;
+            position: absolute;
+            right: 37%;
+            top: 79%;
+        }
+        .update:hover .moja{
+            display: block;
+        }
+        .wraping{
+            overflow: hidden;
+        }
+        .Form-Contents{
+            display: none;
+            min-width: 50px;
+            padding: 16px;
+            z-index: 1;
+        }
+        .wraping:hover .Form-Contents{
+            display: block;
+        }
+        p{
+            text-align:center;
+        }
+      </style>
+    </div>
+    <!--
+    <center>
+    <div class="wraping">
+    <a href="#" onclick="closeform()" id="link">&#9776;</a>
+    <form action="" id="MyFormCollapse" class="Form-Contents"><br>
+        <p>Get Registered Here</p>
+        <br>
+        <input type="number" name="ID" id="id" placeholder="Enter an Id"><br><br>
+        <input type="text" name="Name" id="name" placeholder="Enter a Name"><br><br>
+    
+        <button type="submit" id="btnupdate">Update</button>
+        <script>
+            function openform() {
+                document.getElementById("MyFormCollapse").classList.add("show");
+            }
+            function closeform() {
+                document.getElementsByClassName("MyFormCollapse").classList.remove("show");
+            }
+        </script>
+    </form>
+</div>
+</center>--><br><br>
+<center>
+    <form action="search.php" method="GET">
+        <input type="text" name="query" id="query" placeholder="Search here!" required>
+        <button type="submit" id="btnsearch">Search</button>
+    </form>
+</center>
+<style>
+    .MyForm{
+        margin-top: 3%;
+    }
+    .MyForm input{
+        width: 30%;
+    }
+    #btnsearch{
+    height: 40px;
+    position: absolute;
+    right: 25%;
+   }
+</style>
+</body>
+</html>

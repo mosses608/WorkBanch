@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard || Welcome</title>
+</head>
+<body>
+    <header>
+        <marquee behavior="dynamic" direction="left"><h1>WELCOME TO ASSETS MANAGEMENT SYSTEM</h1></marquee>
+    </header>
+    <hr>
+    <style>
+        marquee:hover{
+            color: blue;
+        }
+        marquee{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        hr{
+            width: 1005;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            border: 0%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .navbar{
+            overflow: hidden;
+        }
+        .navbar a{
+            padding: 5%;
+        }
+        .dropdown-contents{
+            display: none;
+            min-width: 20px;
+            padding: 16px;
+            z-index: 1;
+        }
+        .dropdown-contents a{
+            display: block;
+        }
+        .dropdown-contents a:hover{
+            background-color: white;
+            color: black;
+        }
+        .dropdown:hover .dropdown-contents{
+            display: block;
+        }
+        .navbar a{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            padding-top: 16px;
+        }
+        .navbar{
+            /*text-align: center;*/
+            width: 16%;
+            background-color: rgb(210, 203, 203);
+            height: 740px;
+            float: left;
+            border-right: 2px solid black;
+        }
+        #moj{
+            width: 100%;
+        }
+        #moj a:hover{
+            width: 100%;
+            background-color: blue;
+            color: #ffffff;
+        }
+        #log a:hover{
+            color: #ffffff;
+            background-color: blue;
+        }
+        .pink{
+            width: 100%;
+        }
+        .container h1{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+    <div class="navbar"><br>
+        <div id="moj" class="pink">
+        <a href="dashboard.html" id="moja">Dashboard</a></div><br><hr>
+        <div class="dropdown"><br>
+            <a href="#">Asset Management</a>
+            <div class="dropdown-contents"><hr>
+                <a href="AddAssets.html">New Assets</a><br><hr>
+                <a href="#">Asset Reports</a>
+            </div><br><br>
+           
+        </div>
+        <div id="log"><hr><br>
+            <a href="login.php" id="logi">Logout</a></div><br><hr>
+    </div>
+    <div class="container">
+        <br>
+      <h1 id="H1">User Dashboard</h1> <br>
+      <hr>
+      <style>
+        .container h1:hover{
+            color: blue;
+        }
+        .ImageGroup1, img{
+            display: inline;
+            width: 310px;
+        }
+        .ImageGroup2 img{
+            height: 230px;
+            /*display: none;*/
+            display: inline;
+            /*position: absolute;*/
+            width: 310px;
+        }
+        #largeImg{
+            height: 230px;
+        }
+        .ImageGroup2 img{
+            height: 230px;
+            /*display: none;*/
+            display: inline;
+            /*position: absolute;*/
+            width: 310px;
+        }
+        .MySlides img:hover{
+            color:white;
+        }
+      </style>
+      <div class="MySlides">
+        <div class="ImageGroup1">
+            <img src="images/1.jpg" alt="My Image">
+            <img src="images/2.jpg" alt="My Image">
+            <img src="images/3.jpg" alt="My Image">
+            <img src="images/4.jpg" alt="My Image">
+        </div>
+        <div class="ImageGroup2">
+            <img src="images/5.jpg" alt="My Image" id="largeImg">
+            <img src="images/6.jpg" alt="My Image">
+            <img src="images/7.jpg" alt="My Image">
+            <img src="images/8.jpg" alt="My Image">
+        </div>
+        <div class="ImageGroup2">
+            <img src="images/9.jpg" alt="My Image" id="largeImg">
+            <img src="images/10.jpg" alt="My Image">
+            <img src="images/11.jpg" alt="My Image">
+            <img src="images/12.jpg" alt="My Image">
+        </div>
+      </div> 
+    </div>
+</body>
+</html>
